@@ -1,36 +1,30 @@
-# SvelteKit Demo app
+# Slick Portfolio With Svelte.
 
-The official demo app for SvelteKit, hosted on Vercel.
+Vercel-like style portfolio template for developers.
 
-## Deploy Your Own
+If you want to use the template as it is, you can :
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fvercel%2Ftree%2Fmain%2Fexamples%2Fsveltekit-1&project-name=sveltekit-vercel&repository-name=sveltekit-vercel&demo-title=SvelteKit%20%2B%20Vercel&demo-url=https%3A%2F%2Fsveltekit-template.vercel.app%2F)
+- update files in `src/lib/data` with your data.
+- update `src/lib/index.scss` for custom styling.
+- update `static/favicon.ico` to customize the tab's icon.
 
-_Live Example: https://sveltekit-template.vercel.app_
+Feel free to explore and hack the template to your needs if you feel like it.
 
-## Developing
+Before deploying to `GitHub Pages`:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- make sure to change the `base` parameter in `svelte.config.js`.
+- make sure to update the target branch of the `deploy.yml` file, it is set to build from `master` branch by default.
+- Allow `GitHub Pages` in your repo settings with correct permissions:
+  - Permissions:
+    - go to your repo `Settings` > `Actions` > `General`
+    - in `Actions permissions` : check `Allow all actions and reusable workflows`
+  - Pages:
+    - go to your repo's `Settings` > `Pages`
+    - in Source section, select `Deploy from a branch`.
+    - in Branch section, select `gh-pages` and `/ (root)` and click on save
 
-```bash
-npm run dev
+if you did all the above `CORRECTLY`, and no workflow was launched, try to push another commit (maybe an empty one), otherwise you can create an issue and link your repo.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Known issues:
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-## Speed Insights
-
-Once deployed on Vercel, you can benefit from [Speed Insights](https://vercel.com/docs/concepts/speed-insights) simply by navigating to Vercel's dashboard, clicking on the 'Speed Insights' tab, and enabling the product.
-
-You will get data once your application will be re-deployed and will receive visitors.
+- Svelte no longer support `node 14`, use a newer version instead.
